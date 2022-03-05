@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/market-overview/static/css/main.67994290.css",
+    "main.js": "/market-overview/static/js/main.9b9b8e08.js",
+    "index.html": "/market-overview/index.html",
+    "main.67994290.css.map": "/market-overview/static/css/main.67994290.css.map",
+    "main.9b9b8e08.js.map": "/market-overview/static/js/main.9b9b8e08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67994290.css",
+    "static/js/main.9b9b8e08.js"
+  ]
+}
