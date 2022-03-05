@@ -103,6 +103,11 @@ The deployment can be found in the Github Pages of this repository or through th
 
 Give a ⭐️ if you like this project!
 
+## Acknowledgments
+
+- Hat tip to Microverse
+- Inspiration [Nelson Sakwa in Behance](https://www.behance.net/sakwadesignstudio)
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
