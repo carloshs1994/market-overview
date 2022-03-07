@@ -19,7 +19,7 @@ const Details = () => {
           <>
             <section className="stock">
               <h1>{ticker.symbol}</h1>
-              <h2>{stock.companyName}</h2>
+              <h2>{stock.name}</h2>
               <p>
                 Price:
                 {' $'}
