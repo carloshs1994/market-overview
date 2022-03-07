@@ -1,0 +1,28 @@
+form {
+  width: 80vw;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  background-color: $symbol-dribbble;
+  border-radius: 1rem;
+  
+  label {
+    width: 85%;
+    input {
+      color: #fff;
+      width: 100%;
+      border: none;
+      background-color: $symbol-dribbble;
+
+      &::placeholder {
+        color: #fff;
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+}
