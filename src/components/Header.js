@@ -17,7 +17,12 @@ const Header = () => (
             verview
           </p>
         )
-        : <MdArrowBackIos style={{ marginLeft: '1rem' }} />)}
+        : (
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <MdArrowBackIos style={{ marginLeft: '1rem', fontSize: '1.5rem' }} />
+            <p>Back</p>
+          </div>
+        ))}
     </NavLink>
     <nav>
       <NavLink

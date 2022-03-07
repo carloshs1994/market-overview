@@ -1,0 +1,61 @@
+main {
+  height: calc(100vh - 3.5rem);
+  overflow-y: auto;
+  position: relative;
+}
+
+.stock {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-dribbble;
+  gap: 1rem;
+  color: #fff;
+
+  h1 {
+    color: $symbol-dribbble;
+    font-size: 5rem;
+  }
+
+  h2,
+  p {
+    width: 90%;
+    font-family: $font-lato;
+    text-align: end;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+}
+
+ul.details {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  li {
+    width: 100%;
+    height: auto;
+    padding: 1rem 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $light-stock-dribbble;
+
+    &:nth-child(2n) {
+      background-color: $dark-stock-dribbble;
+    }
+
+    p {
+      width: auto;
+    }
+  }
+}
