@@ -102,7 +102,7 @@ const Home = () => {
         <h2>{stock.name}</h2>
         <p>
           Price:
-          {' '}
+          {' $'}
           {stock.price}
         </p>
       </li>

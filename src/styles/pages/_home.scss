@@ -43,7 +43,9 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     color: #fff;
+    overflow: hidden;
 
     &.light {
       background-color: $light-stock-dribbble;
@@ -55,22 +57,22 @@ ul {
 
     h1 {
       color: $symbol-dribbble;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     h2,
     p {
-      width: 95%;
+      width: 90%;
       font-family: $font-lato;
       text-align: end;
     }
     
     h2 {
-      font-size: 0.8rem;
+      font-size: 1.2rem;
     }
     
     p {
-      font-size: 0.7rem;
+      font-size: 1rem;
     }
   }
 }
