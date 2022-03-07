@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches voice search component snapshot 1`] = `
+<main>
+  <h1>
+    VS Under construction...
+  </h1>
+</main>
+`;
