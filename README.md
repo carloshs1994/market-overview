@@ -4,6 +4,8 @@
 
 > Market Overview is a website designed to showcase the US stock market. You could find details about the stock of choice and improve your strategies. Built using React, Redux, SASS, and tested using React testing library.
 
+![Preview](./market-overview.gif))
+
 ## Built With
 
 - React, Redux, SASS

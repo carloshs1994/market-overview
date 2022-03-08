@@ -6,7 +6,7 @@ import { MdArrowBackIos } from 'react-icons/md';
 
 const Header = () => (
   <header>
-    <NavLink to="/">
+    <NavLink to="/market-overview">
       {({ isActive }) => (isActive
         ? (
           <p>

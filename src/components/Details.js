@@ -29,13 +29,13 @@ const Details = () => {
                   ? (
                     <span style={{ color: 'rgb(220, 0, 0)' }}>
                       <IoIosArrowDown />
-                      {stock.changes}
+                      {stock.change}
                     </span>
                   )
                   : (
                     <span style={{ color: 'rgb(126, 255, 126)' }}>
                       <IoIosArrowUp />
-                      {stock.changes}
+                      {stock.change}
                     </span>
                   )}
               </p>

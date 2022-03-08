@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route index element={<Home />} />
+        <Route path="/market-overview" element={<Home />} />
         <Route path="/details/:symbol" element={<Details />} />
         <Route path="/VoiceSearch" element={<VoiceSearch />} />
         <Route path="/Settings" element={<Settings />} />
