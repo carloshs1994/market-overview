@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/market-overview/static/css/main.2b7c084a.css",
-    "main.js": "/market-overview/static/js/main.fa1baff6.js",
+    "main.js": "/market-overview/static/js/main.044ff654.js",
     "index.html": "/market-overview/index.html",
     "main.2b7c084a.css.map": "/market-overview/static/css/main.2b7c084a.css.map",
-    "main.fa1baff6.js.map": "/market-overview/static/js/main.fa1baff6.js.map"
+    "main.044ff654.js.map": "/market-overview/static/js/main.044ff654.js.map"
   },
   "entrypoints": [
     "static/css/main.2b7c084a.css",
-    "static/js/main.fa1baff6.js"
+    "static/js/main.044ff654.js"
   ]
 }
