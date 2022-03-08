@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches voice search component snapshot 1`] = `
+<main>
+  <section
+    className="search"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="stock-name"
+      >
+        <input
+          id="stock-name"
+          name="stockName"
+          onChange={[Function]}
+          placeholder="Search name or symbol"
+          required={true}
+          type="text"
+          value=""
+        />
+      </label>
+      <button
+        aria-label="search"
+        type="submit"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": "white",
+              "fontSize": "1.2rem",
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+          />
+        </svg>
+      </button>
+    </form>
+  </section>
+  <section
+    className="description"
+  >
+    <p>
+      Showing the 0 Most Active Stocks
+    </p>
+  </section>
+  <ul>
+    <li
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <p
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        No Match :(
+      </p>
+    </li>
+  </ul>
+</main>
+`;

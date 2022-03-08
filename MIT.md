@@ -1,0 +1,7 @@
+## Copyright 2022, Carlos Herver Solano
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this [market-overview](https://github.com/carloshs1994/market-overview) and associated documentation files, to deal in the [market-overview](https://github.com/carloshs1994/market-overview) without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [market-overview](https://github.com/carloshs1994/market-overview), and to permit persons to whom the [market-overview](https://github.com/carloshs1994/market-overview) is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the [market-overview](https://github.com/carloshs1994/market-overview).
+
+THE [market-overview](https://github.com/carloshs1994/market-overview) IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE [market-overview](https://github.com/carloshs1994/market-overview) OR THE USE OR OTHER DEALINGS IN THE [market-overview](https://github.com/carloshs1994/market-overview).

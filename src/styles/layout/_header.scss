@@ -1,0 +1,19 @@
+header {
+  width: 100vw;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-dribbble;
+
+  a {
+    margin: 0 0.5rem;
+    color: #fff;
+
+    p {
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

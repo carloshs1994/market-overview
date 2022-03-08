@@ -1,0 +1,13 @@
+nav {
+  font-family: $font-lato;
+  font-size: 1.2rem;
+  height: 100%;
+  width: 23vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .settings-icon {
+    font-size: 1.3rem;
+  }
+}
