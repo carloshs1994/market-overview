@@ -1,10 +1,10 @@
 @import 'abstracts/variables';
-// @import 'abstracts/mixins';
+@import 'abstracts/mixins';
 @import 'base/reset';
 @import 'base/typography';
-@import 'layout/navigation';
 // @import 'layout/grid';
 @import 'layout/header';
+@import 'layout/navigation';
 // @import 'layout/footer';
 // @import 'layout/sidebar';
 @import 'layout/forms';
@@ -14,7 +14,3 @@
 @import 'pages/details';
 // @import 'themes/behance';
 // @import 'themes/dribbble';
-
-main {
-  background-color: $secondary-dribbble;
-}

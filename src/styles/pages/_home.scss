@@ -2,6 +2,10 @@ main {
   height: calc(100vh - 3.5rem);
   overflow-y: auto;
   position: relative;
+
+  @include tablet {
+    height: calc(100vh - 5rem);
+  }
 }
 
 .search {
@@ -11,6 +15,10 @@ main {
   justify-content: center;
   align-items: center;
   background-color: $secondary-dribbble;
+
+  @include tablet {
+    height: 27vh;
+  }
 }
 
 ul {
@@ -58,6 +66,26 @@ ul {
       font-size: 1rem;
     }
   }
+
+  @include tablet {
+    min-height: calc(70vh - 6rem);
+
+    li {
+      height: 40vw;
+
+      h1 {
+        font-size: 7rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 
 .description {
@@ -69,10 +97,18 @@ ul {
   background-color: $description-dribbble;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: -3px;
 
   p {
     width: 80%;
     color: #fff;
+  }
+
+  @include tablet {
+    height: 3rem;
+
+    p {
+      font-size: 1.5rem;
+    }
   }
 }

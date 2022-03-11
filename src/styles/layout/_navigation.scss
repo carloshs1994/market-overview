@@ -10,4 +10,16 @@ nav {
   .settings-icon {
     font-size: 1.3rem;
   }
+
+  @include tablet {
+    width: 120px;
+
+    a {
+      font-size: 1.8rem;
+    }
+
+    .settings-icon {
+      font-size: 2.1rem;
+    }
+  }
 }

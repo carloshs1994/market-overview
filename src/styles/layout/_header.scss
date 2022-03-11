@@ -1,3 +1,7 @@
+#root {
+  height: 100vh;
+}
+
 header {
   width: 100vw;
   height: 3.5rem;
@@ -14,6 +18,20 @@ header {
       span {
         font-size: 1.4rem;
       }
+    }
+  }
+
+  @include tablet {
+    height: 5rem;
+
+    a {
+      font-size: 1.5rem;
+
+      p {
+        span {
+          font-size: 2.2rem;
+        }
+      } 
     }
   }
 }

@@ -28,4 +28,33 @@ form {
       }
     }
   }
+
+  @include tablet {
+    height: 5rem;
+    padding: 0 1.5rem;
+    border-radius: 2.5rem;
+    
+    label {
+      width: 90%;
+
+      input {
+        height: 2rem;
+        font-size: 1.5rem;
+
+        &::placeholder {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    button {
+      width: 1.8rem;
+      height: 1.8rem;
+
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }
