@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const GET_DATA = 'market-overview/detailsReducer/GET_DATA';
+const REMOVE_DATA = 'market-overview/detailsReducer/REMOVE_DATA';
 const initialState = [];
 
 const getDetailData = (payload) => ({
@@ -13,9 +14,16 @@ export const getStockDetails = (ticker) => async (dispatch) => {
   dispatch(getDetailData(details.data));
 };
 
+export const removeDetailsData = () => ({
+  type: REMOVE_DATA,
+  payload: [{}],
+});
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_DATA:
+      return action.payload;
+    case REMOVE_DATA:
       return action.payload;
     default:
       return state;

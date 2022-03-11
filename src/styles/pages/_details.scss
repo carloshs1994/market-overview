@@ -38,6 +38,20 @@ main {
   p {
     font-size: 1rem;
   }
+
+  @include tablet {
+    h1 {
+      font-size: 9rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 ul.details {
@@ -52,14 +66,15 @@ ul.details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: $light-stock-dribbble;
-
+    background-color: $dark-stock-dribbble;
+    
     &:nth-child(2n) {
-      background-color: $dark-stock-dribbble;
+      background-color: $light-stock-dribbble;
     }
 
     p {
       width: auto;
+      text-transform: capitalize;
     }
   }
 }

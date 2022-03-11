@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
-import { getStockDetails } from '../redux/details/details';
+import { getStockDetails, removeDetailsData } from '../redux/details/details';
 import PrintDetails from './PrintDetails';
 
 const Details = () => {
@@ -11,6 +11,9 @@ const Details = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getStockDetails(ticker));
+    return () => {
+      dispatch(removeDetailsData());
+    };
   }, []);
   return (
     <main>
@@ -25,9 +28,9 @@ const Details = () => {
                 {' $'}
                 {stock.price}
                 {' '}
-                {(stock.changes <= 0)
+                {(stock.change <= 0)
                   ? (
-                    <span style={{ color: 'rgb(220, 0, 0)' }}>
+                    <span style={{ color: 'rgb(255, 152, 152)' }}>
                       <IoIosArrowDown />
                       {stock.change}
                     </span>

@@ -23,6 +23,7 @@ header {
 
   @include tablet {
     height: 5rem;
+    padding: 0 1rem;
 
     a {
       font-size: 1.5rem;
