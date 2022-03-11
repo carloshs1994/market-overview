@@ -12,6 +12,7 @@ const PrintStocks = ({ list }) => {
     if (counter === 1 || counter === 4) stockClass = 'dark';
     counter += 1;
     if (counter === 5) counter = 1;
+    if (window.innerWidth > 950) stockClass = '';
     return (
       <Link id={stock.symbol} key={stock.symbol} to={`/details/${stock.symbol}`}>
         <li className={stockClass}>

@@ -6,6 +6,10 @@ main {
   @include tablet {
     height: calc(100vh - 5rem);
   }
+
+  @include desktop {
+    overflow-y: hidden;
+  }
 }
 
 .search {
@@ -83,6 +87,31 @@ ul {
 
       p {
         font-size: 1.8rem;
+      }
+    }
+  }
+
+  @include desktop {
+    height: calc(73vh - 8rem);
+    min-height: 30%;
+    // flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    a {
+      background-color: $dark-stock-dribbble;
+      
+      &:nth-child(2n) {
+        background-color: $light-stock-dribbble;
+      }
+    }
+
+    li {
+      height: 100%;
+      width: 25vw;
+
+      h1 {
+        font-size: 7rem;
       }
     }
   }
