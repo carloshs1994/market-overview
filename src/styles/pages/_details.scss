@@ -52,6 +52,16 @@ main {
       font-size: 2.2rem;
     }
   }
+
+  @include desktop {
+    justify-content: flex-start;
+    gap: 0;
+
+    h2,
+    p {
+      width: 80%;
+    }
+  }
 }
 
 ul.details {
@@ -75,6 +85,14 @@ ul.details {
     p {
       width: auto;
       text-transform: capitalize;
+    }
+  }
+
+  @include desktop {
+    height: calc(70vh - 8rem);
+
+    li {
+      padding: 1rem 10%;
     }
   }
 }

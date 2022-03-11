@@ -108,10 +108,13 @@ ul {
 
     li {
       height: 100%;
-      width: 25vw;
+      width: 22vw;
+      justify-content: flex-start;
+      gap: 3.5rem;
 
       h1 {
-        font-size: 7rem;
+        margin-top: 2.5rem;
+        font-size: 7.5rem;
       }
     }
   }
