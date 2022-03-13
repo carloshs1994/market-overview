@@ -7,16 +7,22 @@ import { getStocksFromAPI } from '../redux/home/home';
 const Home = () => {
   const [searchValue, setSearchValue] = useState('');
   const [description] = useState('Most Active Stocks');
-  const listOfStocks = useSelector((state) => state.homeReducer);
+  const listOfActiveStocks = useSelector((state) => state.homeReducer.activeStocks);
+  const listOfAllStocks = useSelector((state) => state.homeReducer.allStocks.table);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getStocksFromAPI());
   }, []);
 
-  const filteredList = listOfStocks.filter(
-    (stock) => stock.name.toLowerCase().includes(searchValue.toLowerCase())
-    || stock.symbol.toLowerCase().includes(searchValue.toLowerCase()),
-  );
+  const SearchStocks = () => {
+    const key = searchValue.toUpperCase();
+    const index = (typeof (key[0]) === 'number') ? key[0] : key.charCodeAt(0) - 55;
+    const filteredList = listOfAllStocks[index].filter(
+      (stock) => stock.name.toLowerCase().includes(searchValue.toLowerCase())
+      || stock.symbol.toLowerCase().includes(searchValue.toLowerCase()),
+    );
+    return (<PrintStocks list={filteredList} />);
+  };
 
   return (
     <main>
@@ -35,14 +41,14 @@ const Home = () => {
       <section className="description">
         <p>
           {(searchValue === '')
-            ? `Showing the ${listOfStocks.length} ${description}`
+            ? `Showing the ${listOfActiveStocks.length} ${description}`
             : `Results for "${searchValue}"`}
         </p>
       </section>
       <ul>
         {(searchValue === '')
-          ? (<PrintStocks list={listOfStocks} />)
-          : (<PrintStocks list={filteredList} />)}
+          ? (<PrintStocks list={listOfActiveStocks} />)
+          : (<SearchStocks />)}
       </ul>
     </main>
   );
