@@ -7,7 +7,8 @@ let counter = 1;
 
 const PrintStocks = ({ list }) => {
   if (list.length === 0) return <li style={{ width: '100%' }}><p style={{ textAlign: 'center' }}>No Match :(</p></li>;
-  return list.map((stock) => {
+  return list.map((stock, index) => {
+    if (index > 20) return false;
     let stockClass = 'light';
     if (counter === 1 || counter === 4) stockClass = 'dark';
     counter += 1;

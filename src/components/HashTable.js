@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 export default class HashTable {
-  constructor() {
-    this.table = new Array(36);
+  constructor(size) {
+    this.table = new Array(size);
     this.size = 0;
   }
 

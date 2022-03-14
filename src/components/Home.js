@@ -8,7 +8,8 @@ const Home = () => {
   const [searchValue, setSearchValue] = useState('');
   const [description] = useState('Most Active Stocks');
   const listOfActiveStocks = useSelector((state) => state.homeReducer.activeStocks);
-  const listOfAllStocks = useSelector((state) => state.homeReducer.allStocks.table);
+  const listOfStocksByName = useSelector((state) => state.homeReducer.stocksByName.table);
+  const listOfStocksBySymbol = useSelector((state) => state.homeReducer.stocksBySymbol.table);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getStocksFromAPI());
@@ -17,10 +18,15 @@ const Home = () => {
   const SearchStocks = () => {
     const key = searchValue.toUpperCase();
     const index = (typeof (key[0]) === 'number') ? key[0] : key.charCodeAt(0) - 55;
-    const filteredList = listOfAllStocks[index].filter(
-      (stock) => stock.name.toLowerCase().includes(searchValue.toLowerCase())
-      || stock.symbol.toLowerCase().includes(searchValue.toLowerCase()),
-    );
+    const filteredList = [
+      ...listOfStocksBySymbol[index].filter(
+        (stock) => stock.symbol.toLowerCase().includes(searchValue.toLowerCase())
+        || stock.name.toLowerCase().includes(searchValue.toLowerCase()),
+      ),
+      ...listOfStocksByName[index].filter(
+        (stock) => stock.name.toLowerCase().includes(searchValue.toLowerCase()),
+      ),
+    ];
     return (<PrintStocks list={filteredList} />);
   };
 

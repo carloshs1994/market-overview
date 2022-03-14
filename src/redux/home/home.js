@@ -5,7 +5,8 @@ const STORE_STOCKS = 'market-overview/homeReducer/STORE_STOCKS';
 const STORE_ALL_STOCKS = 'market-overview/homeReducer/STORE_ALL_STOCKS';
 const initialState = {
   activeStocks: [],
-  allStocks: [],
+  stocksByName: [],
+  stocksBySymbol: [],
 };
 
 const storeActiveStocks = (payload) => ({
@@ -13,20 +14,24 @@ const storeActiveStocks = (payload) => ({
   payload,
 });
 
-const storeAllStocks = (payload) => ({
+const storeAllStocks = (payloadByName, payloadBySymbol) => ({
   type: STORE_ALL_STOCKS,
-  payload,
+  payloadByName,
+  payloadBySymbol,
 });
 
 export const getStocksFromAPI = () => async (dispatch) => {
   const resultMostActives = await axios.get('https://financialmodelingprep.com/api/v3/stock_market/actives?apikey=58688fe7d21b8bb780234c39f6229ac3');
   dispatch(storeActiveStocks(resultMostActives.data));
-  const stocks = new HashTable();
+  const stocksBySymbol = new HashTable(36);
+  const stocksByName = new HashTable(162);
   const resultAllStocks = await axios.get('https://financialmodelingprep.com/api/v3/stock/list?apikey=58688fe7d21b8bb780234c39f6229ac3');
   resultAllStocks.data.forEach((stock) => {
-    stocks.set(stock.symbol, stock);
+    if (stock.name[0] === stock.symbol[0]) stocksBySymbol.set(stock.symbol, stock);
+    if (stock.name[0] !== stock.symbol[0]) stocksByName.set(stock.name.toUpperCase(), stock);
   });
-  dispatch(storeAllStocks(stocks));
+  dispatch(storeAllStocks(stocksByName, stocksBySymbol));
+  // console.log(stocksByName.table);
 };
 
 const reducer = (state = initialState, action) => {
@@ -34,7 +39,11 @@ const reducer = (state = initialState, action) => {
     case STORE_STOCKS:
       return { ...state, activeStocks: action.payload };
     case STORE_ALL_STOCKS:
-      return { ...state, allStocks: action.payload };
+      return {
+        ...state,
+        stocksByName: action.payloadByName,
+        stocksBySymbol: action.payloadBySymbol,
+      };
     default:
       return state;
   }
